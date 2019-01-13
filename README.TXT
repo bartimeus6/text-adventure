@@ -1,6 +1,6 @@
-NOME DEL PROGETTO: text adventure
-OBIETTIVO DEL PROGETTO: create a text based game
-VERSIONE oppure DATA: v0.1
-COME AVVIARE IL PROGETTO: run game.class from your terminal
-AUTORI: @bartimeus6
-ISTRUZIONI PER L'UTENTE: not ready for use
+PROJECT NAME: text adventure
+PROJECT OBJECTIVE: create a text based game
+VERSION: v0.1
+HOW TO RUN THE PROJECT: compile game.java from your terminal and run it
+AUTHORS: @bartimeus6
+ISTRUCTION FOR USERS: not ready for use
