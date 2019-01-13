@@ -1,10 +1,9 @@
-import java.util.*;
 public class game{
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+	tool t = new tool();
 	System.out.println("System: Hello dear player, and welcome to text-adveture!\n        To start playing just type a command!");
         while (true) {
-            String cmd = scan.nextLine();
+            String cmd = t.nextLine();
             switch (cmd) {
 		case "new character":
 		    player plyr = new player();

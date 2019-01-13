@@ -1,4 +1,3 @@
-import java.util.*;
 public class player{
     tool t = new tool();
     //attributes
@@ -12,13 +11,12 @@ public class player{
     String[] equipped = {};
 
     //behaviour
-    public void create(){
-	Scanner scan = new Scanner(System.in);        
+    public void create(){        
 	System.out.println("System: Please enter your character name");
-	name = scan.nextLine();
+	name = t.nextLine();
 	int stat = t.randint(7) + t.randint(7) + t.randint(7);
 	System.out.println("System: you rolled a " + stat + ", type what stat you want to assign it to.");
-	String chosenstat = scan.nextLine();
+	String chosenstat = t.nextLine();
 	switch (chosenstat) {
 		case "hp":
 			hp = stat;
