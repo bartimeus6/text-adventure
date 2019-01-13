@@ -8,6 +8,7 @@ public class game{
 		case "new character":
 		    player plyr = new player();
 		    plyr.create();
+		    break;
                 default:
                     System.out.println("System: Unknown command!");
             }
