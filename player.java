@@ -3,6 +3,7 @@ public class player{
     //attributes
     String name;
     int hp;
+    int maxhp;
     int strenght;
     int dexterity;
     int intelligence;
@@ -14,6 +15,7 @@ public class player{
     public void create(){        
 	System.out.println("System: Please enter your character name.");
 	name = t.nextLine();
+	maxhp = 50;
 	hp = 50;
 	System.out.println("System: " + name + " has 50 HP. Now you will roll 3 dice and chose to wich stat assign\n        each of the results. Available stats are strenght dexterity and\n        intelligence. [press enter]");
 	//the following input is just to stop the script until the player press enter
@@ -60,5 +62,14 @@ public class player{
 			}
 		}
 	}
+    }
+
+    public void stats() {
+	System.out.println("System:");
+	System.out.println("        |" + name + "\'s stats|");
+	System.out.println("        HP: " + hp + "/" + maxhp);
+	System.out.println("        strenght: " + strenght);
+	System.out.println("        dexterity: " + dexterity);
+	System.out.println("        intelligence: " + intelligence);
     }
 }
