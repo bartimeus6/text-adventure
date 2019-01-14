@@ -12,18 +12,53 @@ public class player{
 
     //behaviour
     public void create(){        
-	System.out.println("System: Please enter your character name");
+	System.out.println("System: Please enter your character name.");
 	name = t.nextLine();
-	int stat = t.randint(7) + t.randint(7) + t.randint(7);
-	System.out.println("System: you rolled a " + stat + ", type what stat you want to assign it to.");
-	String chosenstat = t.nextLine();
-	switch (chosenstat) {
-		case "hp":
-			hp = stat;
-			System.out.println("System: Your HP are now " + hp);
-			break;
-		default:
-			System.out.println("System: There isn\'t a stat with that name!");
+	hp = 50;
+	System.out.println("System: " + name + " has 50 HP. Now you will roll 3 dice and chose to wich stat assign\n        each of the results. Available stats are strenght dexterity and\n        intelligence. [press enter]");
+	//the following input is just to stop the script until the player press enter
+	String a = t.nextLine();
+	for (int i=0; i<3; i++) {
+		int stat = t.randint(6) + 1;
+		System.out.println("System: you rolled a " + stat + ", type what stat you want to assign it to.");
+		boolean assigned = false;
+		while (assigned == false) {
+			String chosenstat = t.nextLine();
+			switch (chosenstat) {
+				case "strenght":
+					if (strenght == 0) {
+						strenght = stat;
+						System.out.println("System: Your strenght is now " + strenght);
+						assigned = true;
+					}
+					else {
+						System.out.println("System: You have already assigned a valuse to this stat!");
+					}
+					break;
+				case "dexterity":
+					if (dexterity == 0) {
+						dexterity = stat;
+						System.out.println("System: Your dexterity is now " + dexterity);
+						assigned = true;
+					}
+					else {
+						System.out.println("System: You have already assigned a valuse to this stat!");
+					}
+					break;
+				case "intelligence":
+					if (intelligence == 0) {
+						intelligence = stat;
+						System.out.println("System: Your intelligence is now " + intelligence);
+						assigned = true;
+					}
+					else {
+						System.out.println("System: You have already assigned a valuse to this stat!");
+					}
+					break;
+				default:
+					System.out.println("System: There isn\'t a stat with that name!");
+			}
+		}
 	}
     }
 }
