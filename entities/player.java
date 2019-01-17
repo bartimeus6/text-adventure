@@ -25,7 +25,7 @@ public class player{
 	this.name = t.nextLine();
 	this.maxhp = 50;
 	this.hp = 50;
-	System.out.println("System: " + name + " has 50 HP. Now you will roll 3 dice and chose to wich stat assign\n        each of the results. Available stats are strenght dexterity and\n        intelligence. [press enter]");
+	System.out.println("System: " + name + " has 50 HP. Now you will roll 3 dice and choose to wich stat assign\n        each of the results. Available stats are strenght dexterity and\n        intelligence. [press enter]");
 	//the following input is just to stop the script until the player press enter
 	String a = t.nextLine();
 	for (int i=0; i<3; i++) {
